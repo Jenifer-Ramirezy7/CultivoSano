@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CultivoSano</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+.mi-boton-cafe {
+    background-color: #6f4e37;     /* Café base */
+    color: white;
+    border: none;
+    border-radius: 30px;           /* Muy redondeado */
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mi-boton-cafe:hover {
+    background-color: #5a3c29;      /* Café más oscuro */
+    transform: translateY(-4px);    /* Flotar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mi-boton-cafe i {
+    font-size: 20px;
+}
+
+        .right-panel {
+            background-color: white;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeInRight 2s ease forwards;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            animation: fadeInScale 2s ease forwards;
+        }
+
+        h5 {
+            text-align: left;
+            color: rgb(203, 17, 17);
+            animation: fadeInLeft 2s ease-in-out;
+        }
+
+        h2, p, ul {
+            opacity: 0;
+            animation: fadeIn 3s ease forwards;
+            animation-delay: 1s;
+        }
+
+        ul li {
+            animation: fadeInItem 3s ease forwards;
+            animation-delay: 2s;
+        }
+
+
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInItem {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            button {
+                font-size: 16px;
+                max-width: 100%;
+            }
+
+            ul, p {
+                font-size: 16px;
+            }
+            .mi-boton-cafe {
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.mi-boton-cafe:hover {
+    background-color: #4a930a;
+}
+
+.color-red{
+    color:red;
+}
+        }
+    </style>
+</head>
+<body style="background-color: rgb(76, 185, 66);">
+
+       
+        <div id="label-container" class="mt-3"> <br>
+             <h1>Gallina ciega(Phyllophaga sp, Cyclocephala, Diplotaxis,ect.)</h1>
+       <center> <img src="images/ciega.jpg"></center>
+            <br>
+            
+            <h3>¿Cómo es la plaga?</h3>
+            <ul id="texto-lectura">
+            <br>
+            <li><strong>Se trata de larvas de escarabajos del género Phyllophaga, con cuerpos blancos y en forma de C, que viven en el suelo.</strong></li>
+            <br>
+<br>
+                <h3>Daños en la planta:</h3>
+                <br>
+                <li><strong>Se alimentan de las raíces, impidiendo que la planta absorba agua y nutrientes.Los daños pueden ser tan graves que causen la muerte de hasta el 50% de las plantas en algunos cultivos como el maíz. </strong></li>
+                <br>
+<br>
+                <h3>Síntomas:</h3>
+                <br>
+                <li><strong>Crecimiento reducido y debilitamiento de las plantas, hojas amarillentas o cloróticas, muerte regresiva de ramas, caída prematura de frutos, raíces mordidas y dañadas. </strong> </li>
+<br>
+                <h3>Prevención:</h3>
+                <br>
+                <li><strong>Mantener el suelo húmedo ayuda a controlar las larvas. Un riego ligero después de aplicar ciertos tratamientos puede ayudar a que bajen al suelo. </strong> </li>
+                <li><strong>Al anochecer, utilizar trampas de luz para capturar y eliminar a los adultos en primavera y principios de verano, reduciendo así la puesta de huevos.</strong> </li>
+                <li><strong>Colocar trozos de patata o algún tubérculo en el suelo puede atraer a las larvas. Se pueden retirar de forma manual y reubicarlas en un compostero o lugar con materia orgánica, ya que ayudan a descomponerla. </strong> </li>
+<br>
+                <h3>Posible solución:</h3>
+                <br>
+                <li><strong>Control biológico: Aplicar hongos entomopatógenos como Beauveria bassiana y Metarhizium anisopliae, o nematodos como Heterorhabditis bacteriophora. Estos agentes biológicos infectan y matan a las larvas.</strong> </li>
+                <li><strong>Insecticidas químicos: Usar insecticidas de contacto, como los piretroides, dirigidos a los adultos al anochecer para controlar su reproducción. Es importante consultar la ficha técnica del producto para conocer la dosis y el momento de aplicación adecuados. </strong> </li>
+                </ul>
+                
+
+<br>
+<br>
+<br>
+<a href="Escaneo.html">
+  <button class="mi-boton-cafe">
+    <i class="fas fa-camera"></i> Volver a escanear
+  </button>
+</a>
+<br>
+<br>
+<br>
+</div>
+
+</body>
+</html>
